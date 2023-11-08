@@ -98,17 +98,39 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous" ></script>
 
+     
+
+
       <script>
-        const emojies = document.querySelectorAll(".emoji-shape ");
+        const emojies = document.querySelectorAll(".emoji-shape");
+        let selectedEmoji = null;
+      
         emojies.forEach(function (btn) {
           btn.addEventListener("click", function (e) {
             const question = e.currentTarget;
-            question.classList.toggle("add-change");
-            question.nextElementSibling.classList.toggle("color-red")
-
+      
+            if (selectedEmoji === question) {
+              // If the clicked emoji is already selected, deselect it
+              question.classList.remove("add-change");
+              question.nextElementSibling.classList.remove("color-red");
+              selectedEmoji = null;
+            } else {
+              if (selectedEmoji !== null) {
+                // Deselect the previously selected emoji
+                selectedEmoji.classList.remove("add-change");
+                selectedEmoji.nextElementSibling.classList.remove("color-red");
+              }
+      
+              // Select the clicked emoji
+              question.classList.add("add-change");
+              question.nextElementSibling.classList.add("color-red");
+              selectedEmoji = question;
+            }
           });
         });
       </script>
+      
+      
 
   </body>
 </html>
