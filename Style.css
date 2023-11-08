@@ -19,7 +19,7 @@
     letter-spacing: 2px;
     font-weight: bold;
     line-height: 1.4;
-    font-size: 44px;
+    font-size: 38px;
 }
 
 .row-main-div{
@@ -66,7 +66,7 @@ flex-wrap: wrap;
     height: 50px;
     padding: 5px;
     border: none;
-    padding: 5px 20px;
+    padding: 0px 20px;
     outline: none;
     font-size: 20px;
     font-weight: bold;
@@ -79,7 +79,7 @@ flex-wrap: wrap;
 }
 .input-row > button{
     /* width: 12.5%; */
-    height: 60px;
+    height: 50px;
     border: none;
     background-color: rgb(44, 58, 71);
     color: white;
@@ -93,6 +93,7 @@ flex-wrap: wrap;
     .Feedback-Heading {font-size: 25px;}
     .row-main-div{justify-content: center;}
     .likely-text{font-size: 12px;}
+    .input-row > input{margin-bottom: 10px;}
     .input-row > input::placeholder{font-size: 15px;}
     .input-row > button{height: 50px; width: 100px;}
   }
