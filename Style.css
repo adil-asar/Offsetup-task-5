@@ -22,6 +22,15 @@
     font-size: 38px;
 }
 
+.Feedback-Description{
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: rgb(99, 110, 114);
+}
+
 .row-main-div{
     display: flex;
     justify-content: space-evenly;
@@ -30,9 +39,54 @@
     margin-top: 70px;
     /* background-color: azure; */
 }
+
+.row-emoji-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 45px auto;
+}
+.emojies{
+    margin: 20px;
+    text-align: center;
+    /* background-color: aqua; */
+    padding: 5px;
+}
+.emoji-shape{
+    width: 90px;
+    height: 90px;
+     border: 1px solid rgb(247, 174, 85); 
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 20px;
+}
+.emoji-shape > img{
+    width: 85px;
+    height:85px;
+}
+
+.emoji-name{
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: rgb(99, 110, 114);
+}
+
 .add-bg{
     background-color: rgb(240, 108, 128);
     color: white;
+}
+
+.add-change{
+    background-color: rgb(233, 233, 134);
+    border-color: red;
+}
+.color-red{
+    color: red;
+    font-weight: bold;
 }
 .num{
     width: 75px;
@@ -47,6 +101,7 @@
     background-color: rgb(240, 108, 128);
     color: white;
     border-color:rgb(240, 108, 128) ;
+    cursor: pointer;
 }
 .likely-text{
     font-weight: bold;
@@ -90,7 +145,22 @@ flex-wrap: wrap;
     font-size: 20px;
     letter-spacing: 1px;  
 }
-
+.form-label{
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+#exampleFormControlInput1{
+    height: 60px;
+    position: relative;
+    padding-left: 40px;
+}
+.chat-img{
+    width: 30px;
+    position: absolute;
+    top: 50;
+}
 
 @media screen and (max-width: 600px) {
     .Feedback-Heading {font-size: 25px;}
