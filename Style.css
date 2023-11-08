@@ -63,6 +63,10 @@
      align-items: center;
      margin-bottom: 20px;
 }
+.emoji-shape:hover{
+    background-color: rgb(233, 233, 134);
+    border-color: rgb(233, 233, 134);
+}
 .emoji-shape > img{
     width: 85px;
     height:85px;
@@ -194,6 +198,15 @@ flex-wrap: wrap;
     background-color: rgb(44, 58, 71);
     color: white;
 }
+.btn-row .btn-submit:hover{
+    background-color: white;
+    color: rgb(44, 58, 71);
+}
+.btn-row .btn-cancel:hover{
+    background-color: rgb(44, 58, 71);
+    color: white;
+}
+
 .btn-row .btn-cancel{
     background-color: #fff;
 }
