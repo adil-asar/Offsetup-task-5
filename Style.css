@@ -98,5 +98,6 @@ flex-wrap: wrap;
     .likely-text{font-size: 12px;}
     .input-row > input{margin-bottom: 10px;}
     .input-row > input::placeholder{font-size: 15px;}
-    .input-row > button{height: 50px; width: 100px;}
+    .input-row > button{height: 45px; border-radius: 7px; width: 90px; font-size: 15px;}
+    .num h1{font-size: 23px;}
   }
