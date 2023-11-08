@@ -99,5 +99,7 @@ flex-wrap: wrap;
     .input-row > input{margin-bottom: 10px;}
     .input-row > input::placeholder{font-size: 15px;}
     .input-row > button{height: 45px; border-radius: 7px; width: 90px; font-size: 15px;}
-    .num h1{font-size: 23px;}
-  }
+    .num h1{font-size: 20px; margin-top: 5px;}
+    .num{  width: 60px;  height: 60px; }
+
+}
