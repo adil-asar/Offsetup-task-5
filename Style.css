@@ -153,17 +153,53 @@ flex-wrap: wrap;
 }
 #exampleFormControlInput1{
     height: 60px;
-    position: relative;
-    padding-left: 40px;
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+}
+#exampleFormControlInput1::placeholder{
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 17px;
 }
 .chat-img{
     width: 30px;
-    position: absolute;
-    top: 50;
+    margin: 0 15px;
 }
-
+.input-setting{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(223, 230, 233);
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn-row{
+    margin: 40px 0 !important;
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn-row > button{
+    width: 180px;
+    border: 1px solid rgb(44, 58, 71);
+    margin: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+.btn-row .btn-submit{
+    background-color: rgb(44, 58, 71);
+    color: white;
+}
+.btn-row .btn-cancel{
+    background-color: #fff;
+}
 @media screen and (max-width: 600px) {
     .Feedback-Heading {font-size: 25px;}
+    .Feedback-Description{font-size: 16px;}
     .row-main-div{justify-content: center;}
     .likely-text{font-size: 12px;}
     .input-row > input{margin-bottom: 10px;}
@@ -171,5 +207,13 @@ flex-wrap: wrap;
     .input-row > button{height: 45px; border-radius: 7px; width: 90px; font-size: 15px;}
     .num h1{font-size: 20px; margin-top: 5px;}
     .num{  width: 60px;  height: 60px; }
-
+    .emojies{margin: 10px; padding: 2px;}
+    .emoji-shape{width: 70px;height: 70px;}
+    .emoji-shape > img { width: 60px; height: 60px;}
+    .form-label{font-size: 15px;margin-bottom: 15px;}
+    .input-setting{padding: 5px;}
+    #exampleFormControlInput1::placeholder{font: size 15px; }
+    .chat-img{margin: 0 5px;}
+    .btn-row > button{width: 140px; font-size: 15px; }
+ 
 }
