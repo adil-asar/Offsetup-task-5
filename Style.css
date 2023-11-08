@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,200&family=Jost:wght@200;300&family=Mooli&family=Roboto:wght@100;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Josefin Sans", sans-serif; */
+  font-family: "Jost", sans-serif;
+  /* font-family: "Mooli", sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+}
+
+.box{
+    max-width: 1000px;
+    background-color: aqua;
+}
+
+.Feedback-Heading{
+    letter-spacing: 2px;
+    font-weight: bold;
+    line-height: 1.4;
+    font-size: 44px;
+}
+
+.row-main-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    /* background-color: azure; */
+}
+
+.num{
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;align-items: center;
+    border: 2px solid rgb(223, 230, 233);
+    margin:  10px;
+    border-radius: 50%;
+}
+.num:hover{
+    background-color: rgb(240, 108, 128);
+    color: white;
+    border-color:rgb(240, 108, 128) ;
+}
+.likely-text{
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 2px 5px ;
+}
+
+.input-row{
+margin: 40px auto !important;
+border: 2px solid rgb(223, 230, 233);
+padding: 15px;
+display: flex ;
+justify-content: space-between;
+align-items: center;
+border-radius: 15px;
+flex-wrap: wrap;
+}
+.input-row > input{
+    /* width: 85% ; */
+    height: 50px;
+    padding: 5px;
+    border: none;
+    padding: 5px 20px;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.input-row > input::placeholder{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.input-row > button{
+    /* width: 12.5%; */
+    height: 60px;
+    border: none;
+    background-color: rgb(44, 58, 71);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;  
+}
+
+
+@media screen and (max-width: 600px) {
+    .Feedback-Heading {font-size: 25px;}
+    .row-main-div{justify-content: center;}
+    .likely-text{font-size: 12px;}
+    .input-row > input::placeholder{font-size: 15px;}
+    .input-row > button{height: 50px; width: 100px;}
+  }
