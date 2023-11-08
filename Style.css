@@ -30,7 +30,10 @@
     margin-top: 70px;
     /* background-color: azure; */
 }
-
+.add-bg{
+    background-color: rgb(240, 108, 128);
+    color: white;
+}
 .num{
     width: 75px;
     height: 75px;
