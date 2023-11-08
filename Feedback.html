@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Give Feedback</title>
+    <title>Feedback</title>
     <!-- custom css -->
     <link rel="stylesheet" href="Style.css" />
     <!-- bootstrap css -->
@@ -37,100 +37,120 @@
         </div>
 
         <div class="emojies">
-            <div class="emoji-shape">
-              <img src="./images/two.png" alt="" />
-            </div>
-            <p class="emoji-name">Bad</p>
+          <div class="emoji-shape">
+            <img src="./images/two.png" alt="" />
           </div>
+          <p class="emoji-name">Bad</p>
+        </div>
 
-          <div class="emojies">
-            <div class="emoji-shape">
-              <img src="./images/okay.png" alt="" />
-            </div>
-            <p class="emoji-name">Okay</p>
+        <div class="emojies">
+          <div class="emoji-shape">
+            <img src="./images/okay.png" alt="" />
           </div>
+          <p class="emoji-name">Okay</p>
+        </div>
 
-          
-          <div class="emojies">
-            <div class="emoji-shape">
-              <img src="./images/good.png" alt="" />
-            </div>
-            <p class="emoji-name">Good</p>
+        <div class="emojies">
+          <div class="emoji-shape">
+            <img src="./images/good.png" alt="" />
           </div>
-          
-          <div class="emojies">
-            <div class="emoji-shape">
-              <img src="./images/amaz.png" alt="" />
-            </div>
-            <p class="emoji-name">Amazing</p>
-          </div>
+          <p class="emoji-name">Good</p>
+        </div>
 
+        <div class="emojies">
+          <div class="emoji-shape">
+            <img src="./images/amaz.png" alt="" />
+          </div>
+          <p class="emoji-name">Amazing</p>
+        </div>
       </article>
 
+      <article class="row col-md-6 emoji-name-show mx-auto">
+        <h3 id="demo"></h3>
+      </article>
 
       <!-- input row -->
 
       <article class="row col-md-8 mx-auto">
         <div class="mb-3 col-md-11 mx-auto">
-            <label for="exampleFormControlInput1" class="form-label">What are the main reason for your rating? </label>
-            <div class="input-setting">
-                <img src="./images/chat.png" class="chat-img" alt="">
-                <input type="email" class="form-control" id="exampleFormControlInput1"
-             placeholder="Mention a reason for your rating">
-            
-            </div>
-            
+          <label for="exampleFormControlInput1" class="form-label"
+            >What are the main reason for your rating?
+          </label>
+          <div class="input-setting">
+            <img src="./images/chat.png" class="chat-img" alt="" />
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Mention a reason for your rating"
+            />
           </div>
+        </div>
       </article>
 
       <!-- btn-section  -->
 
       <article class="row col-md-8 mx-auto btn-row">
-<button class=" btn-submit ">Submit</button>
-<button class=" btn-cancel ">Cancel</button>
+        <button class="btn-submit">Submit</button>
+        <button class="btn-cancel">Cancel</button>
       </article>
-
     </section>
     <!-- bootstrap css -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous" ></script>
+      crossorigin="anonymous"
+    ></script>
 
-     
-
-
-      <script>
-        const emojies = document.querySelectorAll(".emoji-shape");
-        let selectedEmoji = null;
-      
-        emojies.forEach(function (btn) {
-          btn.addEventListener("click", function (e) {
-            const question = e.currentTarget;
-      
-            if (selectedEmoji === question) {
-              // If the clicked emoji is already selected, deselect it
-              question.classList.remove("add-change");
-              question.nextElementSibling.classList.remove("color-red");
-              selectedEmoji = null;
-            } else {
-              if (selectedEmoji !== null) {
-                // Deselect the previously selected emoji
-                selectedEmoji.classList.remove("add-change");
-                selectedEmoji.nextElementSibling.classList.remove("color-red");
-              }
-      
-              // Select the clicked emoji
-              question.classList.add("add-change");
-              question.nextElementSibling.classList.add("color-red");
-              selectedEmoji = question;
+    <script>
+      const emojies = document.querySelectorAll(".emoji-shape");
+      let selectedEmoji = null;
+      var demo = document.getElementById('demo');
+    
+      emojies.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          const question = e.currentTarget;
+          var emojiName = question.nextElementSibling.innerHTML;
+          if (selectedEmoji === question) {
+            // If the clicked emoji is already selected, deselect it
+            question.classList.remove("add-change");
+            question.nextElementSibling.classList.remove("color-red");
+            selectedEmoji = null;
+           
+          } else {
+            if (selectedEmoji !== null) {
+              // Deselect the previously selected emoji
+              selectedEmoji.classList.remove("add-change");
+              selectedEmoji.nextElementSibling.classList.remove("color-red");
+            
             }
-          });
+    
+            // Select the clicked emoji
+            question.classList.add("add-change");
+            demo.innerHTML = emojiName;
+            question.nextElementSibling.classList.add("color-red");
+            selectedEmoji = question;
+          }
         });
-      </script>
-      
-      
+      });
+    </script>
+    
 
+    <!-- <script>
+      var emoji = document.querySelectorAll(".emoji-shape");
+      var demo = document.getElementById("demo");
+      var selectedEmoji = null;
+      emoji.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          var question = e.currentTarget;
+          var emojiname= question.nextElementSibling;
+          var emojinameshow = question.nextElementSibling.innerHTML;
+          question.classList.toggle("add-change");
+          emojiname.classList.toggle('color-red')
+          demo.innerHTML = emojinameshow;
+        });
+      });
+    </script> -->
   </body>
 </html>
