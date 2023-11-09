@@ -84,6 +84,7 @@
 .emoji-name-show{
     margin-bottom:70px;
     text-align: center !important;
+   
 }
 .emoji-name-show > h3{
     font-size: 20px;
@@ -92,10 +93,11 @@
     margin: auto; 
     padding: 8px 15px;
     border-radius: 10px;
-    font-weight: bold;
+    font-weight: 300;
     background-color: rgb(44, 58, 71);
     width: 150px;
     color: white;
+    display: none;
 }
 .add-bg{
     background-color: rgb(240, 108, 128);

@@ -60,8 +60,12 @@
         </div>
       </article>
       <article class="row col-md-11 mx-auto">
-        <p class="col-md-6 col-6 text-left likely-text">Not likely at all <p id="demo"></p></p>
+        <p class="col-md-6 col-6 text-left likely-text">Not likely at all</p>
         <p class="col-md-6 col-6 text-end likely-text">Extreme likely</p>
+      </article>
+
+      <article class="row col-md-11 mx-auto">
+        <p class="col-md-6 col-6 mx-auto py-2 mb-0 text-center likely-text" id="demo"></p>
       </article>
       <!-- input row -->
       <article class="row col-md-11 input-row flex">
@@ -83,34 +87,7 @@
       crossorigin="anonymous"></script>
     
 
-    <!-- <script>
-      const nums = document.querySelectorAll(".num");
-      let selectedNum = null;
-      const resultDiv = document.getElementById("demo");
-      nums.forEach(function (num) {
-        num.addEventListener("click", function (e) {
-          const clickedNum = e.currentTarget;
-          const numValue = e.currentTarget.querySelector("h1").textContent;
-          console.log(numval)
     
-          if (selectedNum === clickedNum) {
-            // If the clicked number is already selected, deselect it
-            clickedNum.classList.remove("add-bg");
-            selectedNum = null;
-
-          } else {
-            if (selectedNum !== null) {
-              // Deselect the previously selected number
-              selectedNum.classList.remove("add-bg");
-            }
-            
-            // Select the clicked number
-            clickedNum.classList.add("add-bg");
-            selectedNum = clickedNum;
-          }
-        });
-      });
-    </script> -->
 
     <script>
       const nums = document.querySelectorAll(".num");

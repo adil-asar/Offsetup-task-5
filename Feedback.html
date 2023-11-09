@@ -117,18 +117,22 @@
             question.classList.remove("add-change");
             question.nextElementSibling.classList.remove("color-red");
             selectedEmoji = null;
+            demo.innerHTML = "";
+            demo.style.display="none"
            
           } else {
             if (selectedEmoji !== null) {
               // Deselect the previously selected emoji
               selectedEmoji.classList.remove("add-change");
               selectedEmoji.nextElementSibling.classList.remove("color-red");
-            
+              demo.innerHTML = " ";
+              demo.style.display="none"
             }
     
             // Select the clicked emoji
             question.classList.add("add-change");
             demo.innerHTML = emojiName;
+            demo.style.display="Block"
             question.nextElementSibling.classList.add("color-red");
             selectedEmoji = question;
           }
@@ -137,20 +141,5 @@
     </script>
     
 
-    <!-- <script>
-      var emoji = document.querySelectorAll(".emoji-shape");
-      var demo = document.getElementById("demo");
-      var selectedEmoji = null;
-      emoji.forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-          var question = e.currentTarget;
-          var emojiname= question.nextElementSibling;
-          var emojinameshow = question.nextElementSibling.innerHTML;
-          question.classList.toggle("add-change");
-          emojiname.classList.toggle('color-red')
-          demo.innerHTML = emojinameshow;
-        });
-      });
-    </script> -->
   </body>
 </html>
