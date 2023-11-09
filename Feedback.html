@@ -33,35 +33,35 @@
           <div class="emoji-shape">
             <img src="./images/one.png" alt="" />
           </div>
-          <p class="emoji-name">Terrible</p>
+          <p class="emoji-name" id="1">Terrible</p>
         </div>
 
         <div class="emojies">
           <div class="emoji-shape">
             <img src="./images/two.png" alt="" />
           </div>
-          <p class="emoji-name">Bad</p>
+          <p class="emoji-name" id="2">Bad</p>
         </div>
 
         <div class="emojies">
           <div class="emoji-shape">
             <img src="./images/okay.png" alt="" />
           </div>
-          <p class="emoji-name">Okay</p>
+          <p class="emoji-name" id="3">Okay</p>
         </div>
 
         <div class="emojies">
           <div class="emoji-shape">
             <img src="./images/good.png" alt="" />
           </div>
-          <p class="emoji-name">Good</p>
+          <p class="emoji-name" id="4">Good</p>
         </div>
 
         <div class="emojies">
           <div class="emoji-shape">
             <img src="./images/amaz.png" alt="" />
           </div>
-          <p class="emoji-name">Amazing</p>
+          <p class="emoji-name" id="5">Amazing</p>
         </div>
       </article>
 
@@ -111,7 +111,7 @@
       emojies.forEach(function (btn) {
         btn.addEventListener("click", function (e) {
           const question = e.currentTarget;
-          var emojiName = question.nextElementSibling.innerHTML;
+          var emojiName = question.nextElementSibling.id;
           if (selectedEmoji === question) {
             // If the clicked emoji is already selected, deselect it
             question.classList.remove("add-change");
@@ -131,7 +131,7 @@
     
             // Select the clicked emoji
             question.classList.add("add-change");
-            demo.innerHTML = emojiName;
+            demo.innerHTML = "You Selected: " + emojiName;
             demo.style.display="Block"
             question.nextElementSibling.classList.add("color-red");
             selectedEmoji = question;
