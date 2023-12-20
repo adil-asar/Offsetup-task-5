@@ -237,6 +237,14 @@ flex-wrap: wrap;
 
 .btn-row .btn-cancel{
     background-color: #fff;
+    width: 180px;
+    border: 1px solid rgb(44, 58, 71);
+    margin: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border-radius: 10px;
 }
 @media screen and (max-width: 600px) {
     .Feedback-Heading {font-size: 25px;}
