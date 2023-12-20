@@ -217,6 +217,14 @@ flex-wrap: wrap;
 .btn-row .btn-submit{
     background-color: rgb(44, 58, 71);
     color: white;
+   width: 180px;
+    border: 1px solid rgb(44, 58, 71);
+    margin: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border-radius: 10px;
 }
 .btn-row .btn-submit:hover{
     background-color: white;
