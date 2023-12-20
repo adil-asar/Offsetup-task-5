@@ -217,6 +217,7 @@ flex-wrap: wrap;
     letter-spacing: 1px;
     padding: 15px 30px;
     border-radius: 10px;
+  text-decoration :none;
 }
 .btn-row .btn-submit:hover{
     background-color: white;
